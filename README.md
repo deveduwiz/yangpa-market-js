@@ -150,7 +150,7 @@ npm run dev
 ```json
 {
   "success": true,
-  "member": { "id": 1, "name": "홍길동", "email": "a@naver.com" },
+  "member": { "name": "홍길동", "email": "a@naver.com" },
   "message": "회원가입이 완료되었습니다."
 }
 ```
@@ -348,15 +348,14 @@ user (1) ──< (N) sale
 
 회원 정보.
 
-| 컬럼      | 타입               | NULL | 키  | 설명                      |
-| --------- | ------------------ | ---- | --- | ------------------------- |
-| id        | INT AUTO_INCREMENT | N    | PK  | 내부 식별자               |
-| email     | VARCHAR(50)        | N    | UQ  | 로그인 ID 겸 FK 참조 대상 |
-| name      | VARCHAR(50)        | N    |     | 표시 이름                 |
-| password  | VARCHAR(200)       | N    |     | bcrypt 해시               |
-| createdAt | DATETIME           | N    |     | 가입 시각                 |
-| updatedAt | DATETIME           | N    |     | 수정 시각                 |
-| deletedAt | DATETIME           | Y    |     | 탈퇴 시각 (soft delete)   |
+| 컬럼      | 타입         | NULL | 키  | 설명                      |
+| --------- | ------------ | ---- | --- | ------------------------- |
+| email     | VARCHAR(50)  | N    | UQ  | 로그인 ID 겸 FK 참조 대상 |
+| name      | VARCHAR(50)  | N    |     | 표시 이름                 |
+| password  | VARCHAR(200) | N    |     | bcrypt 해시               |
+| createdAt | DATETIME     | N    |     | 가입 시각                 |
+| updatedAt | DATETIME     | N    |     | 수정 시각                 |
+| deletedAt | DATETIME     | Y    |     | 탈퇴 시각 (soft delete)   |
 
 - `email`은 UNIQUE. 중복 가입 시 409를 반환합니다.
 - `password`는 평문을 저장하지 않으며 어떤 응답에도 포함되지 않습니다.
