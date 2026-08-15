@@ -350,7 +350,7 @@ user (1) ──< (N) sale
 
 | 컬럼      | 타입         | NULL | 키  | 설명                      |
 | --------- | ------------ | ---- | --- | ------------------------- |
-| email     | VARCHAR(50)  | N    | UQ  | 로그인 ID 겸 FK 참조 대상 |
+| email     | VARCHAR(50)  | N    | PK  | 로그인 ID 겸 FK 참조 대상 |
 | name      | VARCHAR(50)  | N    |     | 표시 이름                 |
 | password  | VARCHAR(200) | N    |     | bcrypt 해시               |
 | createdAt | DATETIME     | N    |     | 가입 시각                 |
